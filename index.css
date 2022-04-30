@@ -1,0 +1,31 @@
+.wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.health-bar-wrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 40px);
+  padding: 20px;
+}
+
+.player-health {
+  background-color: yellow;
+  height: 30px;
+  width: 100%;
+}
+
+.timer {
+  background-color: red;
+  height: 100px;
+  width: 100px;
+  flex-shrink: 0;
+}
+
+.enemy-health {
+  background-color: yellow;
+  height: 30px;
+  width: 100%;
+}
