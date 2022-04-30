@@ -12,9 +12,14 @@
 }
 
 .player-health {
-  background-color: yellow;
-  height: 30px;
   width: 100%;
+  display: flex;
+}
+
+.enemy-health {
+  width: 100%;
+  display: flex;
+  justify-content: end;
 }
 
 .timer {
@@ -24,7 +29,7 @@
   flex-shrink: 0;
 }
 
-.enemy-health {
+.health-gauge {
   background-color: yellow;
   height: 30px;
   width: 100%;
