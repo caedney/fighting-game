@@ -103,6 +103,15 @@ const enemy = new Sprite({
   },
 });
 
+function detectCollision(rect1, rect2) {
+  return (
+    rect1.attackBox.position.x + rect1.attackBox.width >= rect2.position.x &&
+    rect1.attackBox.position.x <= rect2.position.x + rect2.width &&
+    rect1.attackBox.position.y + rect1.attackBox.height >= rect2.position.y &&
+    rect1.attackBox.position.y <= rect2.position.y + rect2.height
+  );
+}
+
 function animate() {
   window.requestAnimationFrame(animate);
   context.fillStyle = 'black';
@@ -127,16 +136,16 @@ function animate() {
     enemy.velocity.x = speed;
   }
 
-  // Detect a collision
-  if (
-    player.attackBox.position.x + player.attackBox.width >= enemy.position.x &&
-    player.attackBox.position.x <= enemy.position.x + enemy.width &&
-    player.attackBox.position.y + player.attackBox.height >= enemy.position.y &&
-    player.attackBox.position.y <= enemy.position.y + enemy.height &&
-    player.isAttacking
-  ) {
+  // Detect player collision
+  if (detectCollision(player, enemy) && player.isAttacking) {
     player.isAttacking = false;
-    console.log('collision');
+    console.log('player attack');
+  }
+
+  // Detect ememy collision
+  if (detectCollision(enemy, player) && enemy.isAttacking) {
+    enemy.isAttacking = false;
+    console.log('enemy attack');
   }
 }
 
@@ -170,6 +179,10 @@ window.addEventListener('keydown', (event) => {
     }
     case 'ArrowUp': {
       enemy.velocity.y = jumpHeight;
+      break;
+    }
+    case 'ArrowDown': {
+      enemy.attack();
       break;
     }
   }
