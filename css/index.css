@@ -14,12 +14,15 @@
 .player-health {
   width: 100%;
   display: flex;
+  justify-content: flex-end;
+  background-color: #333;
 }
 
 .enemy-health {
   width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-start;
+  background-color: #333;
 }
 
 .timer {
@@ -27,10 +30,25 @@
   height: 100px;
   width: 100px;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .health-gauge {
   background-color: yellow;
   height: 30px;
   width: 100%;
+}
+
+.tied-game {
+  position: absolute;
+  color: #fff;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }

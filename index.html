@@ -1,6 +1,6 @@
 <html>
   <head>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -8,14 +8,16 @@
         <div class="player-health">
           <div class="health-gauge"></div>
         </div>
-        <div class="timer"></div>
+        <div id="timer" class="timer"></div>
         <div class="enemy-health">
           <div class="health-gauge"></div>
         </div>
       </div>
+      <div id="display-text" class="tied-game"></div>
       <canvas></canvas>
     </div>
 
-    <script src="index.js"></script>
+    <script src="js/classes.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
