@@ -2,9 +2,13 @@
   "name": "fighting-game",
   "version": "1.0.0",
   "main": "index.js",
+  "private": true,
   "repository": "git@github.com:caedney/fighting-game.git",
   "author": "Craig Edney <caedney@btinternet.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "webpack"
+  },
   "devDependencies": {
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0"
