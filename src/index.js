@@ -1,12 +1,14 @@
-import { context, canvas } from './utils/gameSetup';
-import Background from './components/Background';
-import Shop from './components/Shop';
-import Player from './components/Player';
-import Enemy from './components/Enemy';
+import { context, canvas } from 'utils/gameSetup';
+import Background from 'components/Background';
+import Shop from 'components/Shop';
+import Player from 'components/Player';
+import Enemy from 'components/Enemy';
 
-import detectCollision from './utils/detectCollision';
-import determineWinner from './utils/determineWinner';
-import decreaseTimer, { timerID } from './utils/decreaseTimer';
+import detectCollision from 'utils/detectCollision';
+import determineWinner from 'utils/determineWinner';
+import decreaseTimer, { timerID } from 'utils/decreaseTimer';
+
+import 'styles/index.scss';
 
 decreaseTimer();
 

@@ -1,6 +1,6 @@
 import Sprite from './Sprite';
 
-import { canvas } from '../utils/gameSetup';
+import { canvas } from 'utils/gameSetup';
 
 export default class Fighter extends Sprite {
   constructor({

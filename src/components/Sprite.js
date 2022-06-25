@@ -1,4 +1,4 @@
-import { context } from '../utils/gameSetup';
+import { context } from 'utils/gameSetup';
 
 export default class Sprite {
   constructor({

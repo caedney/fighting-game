@@ -1,5 +1,5 @@
-import Player from '../components/Player';
-import Enemy from '../components/Enemy';
+import Player from 'components/Player';
+import Enemy from 'components/Enemy';
 import determineWinner from './determineWinner';
 
 let timer = 60;
