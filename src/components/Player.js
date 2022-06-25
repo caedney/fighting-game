@@ -1,5 +1,13 @@
 import Fighter from './Fighter';
 
+import samuraiMackIdleImage from 'public/images/samuraiMack/Idle.png';
+import samuraiMackRunImage from 'public/images/samuraiMack/Run.png';
+import samuraiMackJumpImage from 'public/images/samuraiMack/Jump.png';
+import samuraiMackFallImage from 'public/images/samuraiMack/Fall.png';
+import samuraiMackAttackImage from 'public/images/samuraiMack/Attack1.png';
+import samuraiMackHitImage from 'public/images/samuraiMack/Take Hit - white silhouette.png';
+import samuraiMackDeathImage from 'public/images/samuraiMack/Death.png';
+
 const Player = new Fighter({
   position: { x: 0, y: 0 },
   velocity: { x: 0, y: 0 },
@@ -8,7 +16,7 @@ const Player = new Fighter({
     x: 0,
     y: 0,
   },
-  imageSrc: 'public/images/samuraiMack/Idle.png',
+  imageSrc: samuraiMackIdleImage,
   framesMax: 8,
   scale: 2.5,
   offset: {
@@ -17,31 +25,31 @@ const Player = new Fighter({
   },
   sprites: {
     idle: {
-      imageSrc: 'public/images/samuraiMack/Idle.png',
+      imageSrc: samuraiMackIdleImage,
       framesMax: 8,
     },
     run: {
-      imageSrc: 'public/images/samuraiMack/Run.png',
+      imageSrc: samuraiMackRunImage,
       framesMax: 8,
     },
     jump: {
-      imageSrc: 'public/images/samuraiMack/Jump.png',
+      imageSrc: samuraiMackJumpImage,
       framesMax: 2,
     },
     fall: {
-      imageSrc: 'public/images/samuraiMack/Fall.png',
+      imageSrc: samuraiMackFallImage,
       framesMax: 2,
     },
     attack1: {
-      imageSrc: 'public/images/samuraiMack/Attack1.png',
+      imageSrc: samuraiMackAttackImage,
       framesMax: 6,
     },
     takeHit: {
-      imageSrc: 'public/images/samuraiMack/Take Hit - white silhouette.png',
+      imageSrc: samuraiMackHitImage,
       framesMax: 4,
     },
     death: {
-      imageSrc: 'public/images/samuraiMack/Death.png',
+      imageSrc: samuraiMackDeathImage,
       framesMax: 6,
     },
   },

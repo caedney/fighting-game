@@ -1,10 +1,18 @@
 import Fighter from './Fighter';
 
+import kenjiIdleImage from 'public/images/kenji/Idle.png';
+import kenjiRunImage from 'public/images/kenji/Run.png';
+import kenjiJumpImage from 'public/images/kenji/Jump.png';
+import kenjiFallImage from 'public/images/kenji/Fall.png';
+import kenjiAttackImage from 'public/images/kenji/Attack1.png';
+import kenjiHitImage from 'public/images/kenji/Take hit.png';
+import kenjiDeathImage from 'public/images/kenji/Death.png';
+
 const Enemy = new Fighter({
   position: { x: 400, y: 100 },
   velocity: { x: 0, y: 0 },
   color: 'blue',
-  imageSrc: 'public/images/kenji/Idle.png',
+  imageSrc: kenjiIdleImage,
   framesMax: 4,
   scale: 2.5,
   offset: {
@@ -13,31 +21,31 @@ const Enemy = new Fighter({
   },
   sprites: {
     idle: {
-      imageSrc: 'public/images/kenji/Idle.png',
+      imageSrc: kenjiIdleImage,
       framesMax: 4,
     },
     run: {
-      imageSrc: 'public/images/kenji/Run.png',
+      imageSrc: kenjiRunImage,
       framesMax: 8,
     },
     jump: {
-      imageSrc: 'public/images/kenji/Jump.png',
+      imageSrc: kenjiJumpImage,
       framesMax: 2,
     },
     fall: {
-      imageSrc: 'public/images/kenji/Fall.png',
+      imageSrc: kenjiFallImage,
       framesMax: 2,
     },
     attack1: {
-      imageSrc: 'public/images/kenji/Attack1.png',
+      imageSrc: kenjiAttackImage,
       framesMax: 4,
     },
     takeHit: {
-      imageSrc: 'public/images/kenji/Take hit.png',
+      imageSrc: kenjiHitImage,
       framesMax: 3,
     },
     death: {
-      imageSrc: 'public/images/kenji/Death.png',
+      imageSrc: kenjiDeathImage,
       framesMax: 7,
     },
   },
