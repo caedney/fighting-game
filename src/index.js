@@ -1,4 +1,5 @@
 import { context, canvas } from 'utils/gameSetup';
+import gsap from 'gsap';
 import Background from 'components/Background';
 import Shop from 'components/Shop';
 import Player from 'components/Player';

@@ -7,8 +7,11 @@
   "author": "Craig Edney <caedney@btinternet.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --config webpack.dev.js --open",
-    "build": "webpack --config webpack.prod.js"
+    "dev": "webpack-dev-server --env mode=development --open",
+    "build": "webpack --env mode=production"
+  },
+  "dependencies": {
+    "gsap": "^3.10.4"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0",
