@@ -3,7 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: false,
-  entry: './src/index.js',
+  entry: {
+    main: './src/index.js',
+    vendor: './src/vendor/index.js',
+  },
   resolve: {
     alias: {
       public: path.resolve(__dirname, './public'),
@@ -14,31 +17,21 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './public/index.html',
       inject: 'body',
     }),
   ],
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        use: [
-          'style-loader', // 3. Injects styles into DOM
-          'css-loader', // 2. Turn css into commonjs
-          'sass-loader', // 1. Turns sass into css
-        ],
-      },
-      {
         test: /\.html$/,
-        use: ['html-loader'],
+        loader: 'html-loader',
       },
       {
-        test: /\.(png|svg)$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[path][name].[ext]',
-          },
+        test: /\.(svg|png|jpe?g|gif)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]',
         },
       },
     ],
