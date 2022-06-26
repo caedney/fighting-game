@@ -5,7 +5,7 @@ module.exports = {
   devtool: false,
   entry: {
     main: './src/index.js',
-    vendor: './src/vendor/index.js',
+    vendor: './src/vendors/index.js',
   },
   resolve: {
     alias: {

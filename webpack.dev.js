@@ -1,8 +1,6 @@
 const path = require('path');
-const common = require('./webpack.common');
-const { merge } = require('webpack-merge');
 
-module.exports = merge(common, {
+module.exports = {
   mode: 'development',
   output: {
     filename: '[name].bundle.js',
@@ -20,4 +18,4 @@ module.exports = merge(common, {
       },
     ],
   },
-});
+};
